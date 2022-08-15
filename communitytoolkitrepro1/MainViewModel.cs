@@ -16,7 +16,7 @@ public partial class MainViewModel : ObservableObject
         SubCharacter c = new SubCharacter();
         c.Name = "Don";
         characters.Add(c);
-        SubCharacter c2 = new SubCharacter();
+        Character c2 = new Character();
         c2.Name = "Shaun";
         characters.Add(c2);
     }
@@ -24,9 +24,18 @@ public partial class MainViewModel : ObservableObject
     [RelayCommand]
     private async Task Tap(Character c)
     {
-        await Shell.Current.GoToAsync(nameof(DetailPage), true, new Dictionary<string, object>()
+        try
         {
-            { "character", c }
-        });
+            // Currently "Shaun" will work but "Don" will fail due to invalid cast.
+
+            await Shell.Current.GoToAsync(nameof(DetailPage), true, new Dictionary<string, object>()
+            {
+                { "character", c }
+            });
+        }
+        catch (Exception ex)
+        {
+
+        }
     }
 }

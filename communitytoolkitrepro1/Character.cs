@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace communitytoolkitrepro1;
+
 public class Character
 {
     public string Name { get; set; }
