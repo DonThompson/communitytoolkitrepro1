@@ -24,9 +24,9 @@ public partial class MainViewModel : ObservableObject
     [RelayCommand]
     private async Task Tap(Character c)
     {
-        //await Shell.Current.GoToAsync(nameof(CharDetailPage), true, new Dictionary<string, object>()
-        //{
-        //    { "character", c }
-        //});
+        await Shell.Current.GoToAsync(nameof(DetailPage), true, new Dictionary<string, object>()
+        {
+            { "character", c }
+        });
     }
 }

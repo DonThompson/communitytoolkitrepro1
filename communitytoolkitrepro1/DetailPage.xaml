@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:viewmodel="clr-namespace:communitytoolkitrepro1"
+             x:DataType="viewmodel:DetailViewModel"
+             x:Class="communitytoolkitrepro1.DetailPage"
+             Title="DetailPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="{Binding Path=Character.Name}"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center"
+                   FontSize="24" />
+
+            <Button Text="Back"
+                    Command="{Binding GoBackCommand}"
+                    HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+    
