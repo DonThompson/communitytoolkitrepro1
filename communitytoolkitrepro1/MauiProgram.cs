@@ -16,6 +16,10 @@ public static class MauiProgram
 			})
             .UseMauiCommunityToolkit();
 
+		builder.Services.AddTransient<MainPage>();
+		builder.Services.AddTransient<MainViewModel>();
+
+
         return builder.Build();
 	}
 }
