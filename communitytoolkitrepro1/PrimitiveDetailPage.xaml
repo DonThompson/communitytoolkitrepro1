@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              xmlns:viewmodel="clr-namespace:communitytoolkitrepro1"
-             x:DataType="viewmodel:DetailViewModel"
-             x:Class="communitytoolkitrepro1.DetailPage"
+             x:DataType="viewmodel:PrimitiveDetailViewModel"
+             x:Class="communitytoolkitrepro1.PrimitiveDetailPage"
              Title="DetailPage">
     <ScrollView>
         <VerticalStackLayout>
-            <Label Text="{Binding Path=Character.Name}"
+            <!-- Primitive data based query parameter support -->
+            <Label Text="{Binding Path=CharacterName}"
                    VerticalOptions="Center" 
                    HorizontalOptions="Center"
                    FontSize="24" />
